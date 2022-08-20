@@ -1,0 +1,111 @@
+<div class="transfer-form">
+  <div class="transfer-form__dropdown">
+    <div class="transfer-form__dropdown__name">CRISTIAN DAVID ARIAS CORREA</div>
+    <div class="transfer-form__dropdown__button-container">
+      <img
+        src="../../../assets/imgs/dropdown-icon.svg"
+        class="transfer-form__dropdown__button-container__icon"
+      />
+      <div class="transfer-form__dropdown__button-container__label-group">
+        <div
+          class="transfer-form__dropdown__button-container__label-group__label"
+        >
+          Prueba
+        </div>
+        <div
+          class="transfer-form__dropdown__button-container__label-group__sub-label"
+        >
+          Formulario
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="transfer-form__form">
+    <div class="transfer-form__form__back">
+      <img
+        src="../../../assets/imgs/back-arrow.svg"
+        class="transfer-form__form__back__button"
+        (click)="goBack()"
+      />
+      <div class="transfer-form__form__back__label">Atrás</div>
+    </div>
+    <form [formGroup]="form" class="transfer-form__form__box">
+      <div class="transfer-form__form__box__title">
+        Indique los siguientes datos para continuar con la solicitud de su
+        adelanto de pensión:
+      </div>
+      <div class="transfer-form__form__box__item">
+        <div class="transfer-form__form__box__item__label">
+          ¿Cuál es el valor total de sus ingresos mensuales?
+        </div>
+        <input
+          class="transfer-form__form__box__item__input"
+          type="number"
+          formControlName="income"
+        />
+      </div>
+      <div class="transfer-form__form__box__item">
+        <div class="transfer-form__form__box__item__label">
+          ¿Cuál es el nombre de su empresa?
+        </div>
+        <input
+          class="transfer-form__form__box__item__input"
+          type="text"
+          formControlName="company"
+        />
+      </div>
+      <div class="transfer-form__form__box__item">
+        <div class="transfer-form__form__box__item__label">
+          ¿Cuál es su ciudad de residencia?
+        </div>
+        <input
+          class="transfer-form__form__box__item__input"
+          type="text"
+          formControlName="city"
+        />
+      </div>
+      <div class="transfer-form__form__box__item">
+        <div class="transfer-form__form__box__item__label">
+          ¿Cuál es su dirección de residencia?
+        </div>
+        <diV class="group">
+          <input
+            class="transfer-form__form__box__item__input"
+            placeholder="Carrera 9 # 116 -08, Bogotá"
+            type="text"
+            formControlName="address"
+          />
+          <img
+            class="transfer-form__form__box__item__icon"
+            src="../../../assets/imgs/icon-pencil.svg"
+          />
+        </diV>
+      </div>
+      <div class="transfer-form__form__box__item">
+        <div class="transfer-form__form__box__item__label">
+          Si está recibiendo ayuda de un asesor del Banco, ingrese el código del
+          asesor:
+        </div>
+        <diV class="group">
+          <input
+            class="transfer-form__form__box__item__input"
+            placeholder="Opcional"
+            type="text"
+            formControlName="code"
+          />
+          <img
+            class="transfer-form__form__box__item__icon"
+            src="../../../assets/imgs/question-icon.svg"
+          />
+        </diV>
+      </div>
+    </form>
+    <button
+      class="transfer-form__form__button"
+      (click)="onSubmit()"
+      [disabled]="!form.valid"
+    >
+      Continuar
+    </button>
+  </div>
+</div>

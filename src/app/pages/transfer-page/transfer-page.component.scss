@@ -1,0 +1,98 @@
+.transfers-page {
+  display: flex;
+  flex-direction: column;
+  //margin-top: 64.4px;
+  width: 100vw;
+  &__dropdown {
+    display: flex;
+    flex-direction: column;
+    background-color: #d9d9d9;
+    margin-bottom: 1.5px;
+    &__name {
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      margin-top: 10.3px;
+      color: #575757;
+      font-size: 15px;
+    }
+    &__button-container {
+      display: flex;
+      padding-left: 10px;
+      padding-top: 16.9px;
+      padding-bottom: 11px;
+      &__icon {
+        width: 21px;
+        height: 16px;
+      }
+      &__label-group {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        &__label {
+          font-size: 14px;
+          color: #000000;
+          margin-bottom: 2px;
+        }
+        &__sub-label {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  &__features-info {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #eaeaea;
+    //height: 100vh;
+    &__back {
+      display: flex;
+      margin-bottom: 20px;
+      &__button {
+      }
+      &__label {
+        margin-left: 5.3px;
+        align-self: center;
+        font-size: 15px;
+        color: #444444;
+      }
+    }
+    &__item {
+      display: flex;
+      margin-bottom: 32px;
+      &__logo {
+      }
+      &__label {
+        font-size: 14px;
+        margin-left: 10px;
+        color: #575756;
+      }
+    }
+    &__disclaimer {
+      text-align: center;
+      font-size: 13px;
+      color: #575756;
+      padding-left: 70px;
+      padding-right: 70px;
+      margin-bottom: 15px;
+      &__weighted {
+        font-weight: bold;
+        font-size: 13px;
+      }
+    }
+    &__button {
+      width: fit-content;
+      align-self: center;
+      color: white;
+      background-color: #dd141d;
+      border: 0;
+      padding: 9px 25px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 7px;
+      text-align: center;
+      line-height: 22px;
+    }
+  }
+}

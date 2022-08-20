@@ -1,0 +1,125 @@
+.transfer-form {
+  display: flex;
+  flex-direction: column;
+  //margin-top: 64.4px;
+  width: 100vw;
+  &__dropdown {
+    display: flex;
+    flex-direction: column;
+    background-color: #d9d9d9;
+    margin-bottom: 1.5px;
+    &__name {
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      margin-top: 10.3px;
+      color: #575757;
+      font-size: 15px;
+    }
+    &__button-container {
+      display: flex;
+      padding-left: 10px;
+      padding-top: 16.9px;
+      padding-bottom: 11px;
+      &__icon {
+        width: 21px;
+        height: 16px;
+      }
+      &__label-group {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        &__label {
+          font-size: 14px;
+          color: #000000;
+          margin-bottom: 2px;
+        }
+        &__sub-label {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #eaeaea;
+    //height: 100vh;
+    &__back {
+      display: flex;
+      margin-bottom: 20px;
+
+      &__label {
+        margin-left: 5.3px;
+        align-self: center;
+        font-size: 15px;
+        color: #444444;
+      }
+    }
+    &__box {
+      display: flex;
+      flex-direction: column;
+      border-radius: 10px;
+      background-color: #f8f8f8;
+      padding: 15px;
+      margin-left: -10px;
+      margin-right: -10px;
+      box-shadow: 0px 1px 4px #00000029;
+      margin-bottom: 15px;
+      &__title {
+        font-weight: bold;
+        font-size: 14px;
+        color: #575757;
+      }
+      &__item {
+        display: flex;
+        flex-direction: column;
+        margin-top: 14px;
+        position: relative;
+        &__label {
+          font-size: 13px;
+          color: #444444;
+          margin-bottom: 5.3px;
+        }
+
+        &__input {
+          border-radius: 5px;
+          padding: 9px;
+          font-size: 14px;
+          border: #7070704d solid 1px;
+
+          &::placeholder {
+            color: rgba(87, 87, 87, 0.5);
+          }
+        }
+        &__icon {
+          position: absolute;
+          right: 12px;
+          top: 11px;
+        }
+      }
+    }
+    .group {
+      position: relative;
+      display: flex;
+      flex-direction: inherit;
+    }
+    &__button {
+      width: fit-content;
+      align-self: center;
+      color: white;
+      background-color: #dd141d;
+      border: 0;
+      padding: 9px 25px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 7px;
+      text-align: center;
+      line-height: 22px;
+      &:disabled {
+        background-color: #939393;
+      }
+    }
+  }
+}
