@@ -1,0 +1,28 @@
+.dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &__input {
+    border-radius: 5px;
+    padding: 9px;
+    font-size: 14px;
+    border: #7070704d solid 1px;
+
+    &::placeholder {
+      color: rgba(87, 87, 87, 0.5);
+    }
+  }
+  &::before {
+    content: " ";
+    position: absolute;
+    border-bottom: 1px solid rgb(112, 112, 112, 0.3);
+    border-right: 1px solid rgb(112, 112, 112, 0.3);
+    height: 10px;
+    width: 10px;
+
+    right: 12px;
+    top: 11px;
+    transform: rotate(45deg);
+  }
+}

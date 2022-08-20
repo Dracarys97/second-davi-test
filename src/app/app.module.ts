@@ -10,6 +10,7 @@ import { PaymentMethodComponent } from './pages/payment-method/payment-method.co
 import { TransferFormComponent } from './pages/transfer-form/transfer-form.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DropdownComponent } from './pages/transfer-form/components/dropdown/dropdown.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PaymentMethodComponent,
     TransferFormComponent,
     HeaderComponent,
+    DropdownComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, FormsModule],
   providers: [],

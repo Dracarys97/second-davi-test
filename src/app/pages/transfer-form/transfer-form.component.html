@@ -46,6 +46,13 @@
       </div>
       <div class="transfer-form__form__box__item">
         <div class="transfer-form__form__box__item__label">
+          ¿Cuál es su actividad laboral actual?
+        </div>
+        <app-dropdown [placeholder]="'Seleccione una opción'"></app-dropdown>
+      </div>
+
+      <div class="transfer-form__form__box__item">
+        <div class="transfer-form__form__box__item__label">
           ¿Cuál es el nombre de su empresa?
         </div>
         <input
@@ -53,6 +60,12 @@
           type="text"
           formControlName="company"
         />
+      </div>
+      <div class="transfer-form__form__box__item">
+        <div class="transfer-form__form__box__item__label">
+          ¿Qué tipo de contrato tiene?
+        </div>
+        <app-dropdown [placeholder]="'Seleccione una opción'"></app-dropdown>
       </div>
       <div class="transfer-form__form__box__item">
         <div class="transfer-form__form__box__item__label">
