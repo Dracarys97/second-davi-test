@@ -1,0 +1,43 @@
+<div class="payment-container" [formGroup]="orderForm">
+  <div class="payment-container__input-family">
+    <input
+      type="radio"
+      name="paymentType"
+      formControlName="paymentType"
+      value="{{ paymentMethod.title }}"
+      (change)="handleChange(paymentMethod.title)"
+    />
+    <div class="payment-container__input-family__label-group">
+      <div class="payment-container__input-family__label-group__title">
+        {{ paymentMethod.title }}
+      </div>
+      <div class="payment-container__input-family__label-group__price">
+        {{ paymentMethod.price }}
+      </div>
+    </div>
+  </div>
+  <img class="payment-container__photo" src="{{ paymentMethod.img }}" />
+  <div class="payment-container__dropdown-button" (click)="openDropDown()">
+    <div class="payment-container__dropdown-button__label">
+      Ver más información
+    </div>
+    <div
+      [ngClass]="
+        open
+          ? 'payment-container__dropdown-button__arrow-closed'
+          : 'payment-container__dropdown-button__arrow'
+      "
+    ></div>
+  </div>
+</div>
+<div [ngClass]="open ? 'opened' : 'closed'">
+  <div
+    class="dropdown-family"
+    *ngFor="let disclosure of paymentMethod.disclosures"
+  >
+    <div class="dropdown-family__check"></div>
+    <div class="dropdown-family__label">
+      {{ disclosure }}
+    </div>
+  </div>
+</div>

@@ -11,6 +11,7 @@ import { TransferFormComponent } from './pages/transfer-form/transfer-form.compo
 import { HeaderComponent } from './components/header/header.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DropdownComponent } from './pages/transfer-form/components/dropdown/dropdown.component';
+import { PaymentContainerComponent } from './pages/payment-method/components/payment-container/payment-container.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { DropdownComponent } from './pages/transfer-form/components/dropdown/dro
     TransferFormComponent,
     HeaderComponent,
     DropdownComponent,
+    PaymentContainerComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, FormsModule],
   providers: [],

@@ -1,36 +1,73 @@
-<div class="transfers-page">
-  <div class="transfers-page__dropdown">
-    <div class="transfers-page__dropdown__name">
+<div class="payment-method">
+  <div class="payment-method__dropdown">
+    <div class="payment-method__dropdown__name">
       CRISTIAN DAVID ARIAS CORREA
     </div>
-    <div class="transfers-page__dropdown__button-container">
+    <div class="payment-method__dropdown__button-container">
       <img
         src="../../../assets/imgs/dropdown-icon.svg"
-        class="transfers-page__dropdown__button-container__icon"
+        class="payment-method__dropdown__button-container__icon"
       />
-      <div class="transfers-page__dropdown__button-container__label-group">
+      <div class="payment-method__dropdown__button-container__label-group">
         <div
-          class="transfers-page__dropdown__button-container__label-group__label"
+          class="payment-method__dropdown__button-container__label-group__label"
         >
           Prueba
         </div>
         <div
-          class="transfers-page__dropdown__button-container__label-group__sub-label"
+          class="payment-method__dropdown__button-container__label-group__sub-label"
         >
-          Beneficios y caracteristicas
+          Formulario
         </div>
       </div>
     </div>
   </div>
-  <div class="transfers-page__features-info">
-    <div class="transfers-page__features-info__back">
+  <div class="payment-method__methods">
+    <div class="payment-method__methods__back">
       <img
         src="../../../assets/imgs/back-arrow.svg"
-        class="transfers-page__features-info__back__button"
+        class="payment-method__methods__back__button"
       />
-      <div class="transfers-page__features-info__back__label">Atrás</div>
+      <div class="payment-method__methods__back__label">Atrás</div>
     </div>
-
-    <button class="transfers-page__features-info__button">Continuar</button>
+    <form [formGroup]="form" class="payment-method__methods__box">
+      <div class="payment-method__methods__box__title">
+        ¿Cómo quiere pagar su seguro?
+      </div>
+      <div class="payment-method__methods__box__radios">
+        <input
+          type="radio"
+          name="paymentTime"
+          formControlName="paymentTime"
+          value="monthly"
+          (change)="handleChange('Mensual')"
+        />
+        <div class="payment-method__methods__box__radios__label">Mensual</div>
+        <input
+          type="radio"
+          name="paymentTime"
+          formControlName="paymentTime"
+          value="yearly"
+          (change)="handleChange('Anual')"
+        />
+        <div class="payment-method__methods__box__radios__label">Anual</div>
+      </div>
+      <div class="payment-method__methods__box__title">
+        Seleccione el tipo de cobertura que desea adquirir:
+      </div>
+      <app-payment-container
+        *ngFor="let method of methods"
+        [paymentMethod]="method"
+        [orderForm]="form"
+      >
+      </app-payment-container>
+    </form>
+    <button
+      class="payment-method__methods__button"
+      (click)="onSubmit()"
+      [disabled]="!form.valid"
+    >
+      Continuar
+    </button>
   </div>
 </div>
